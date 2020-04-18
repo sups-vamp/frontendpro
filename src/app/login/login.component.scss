@@ -23,8 +23,36 @@
     background-color: black;
 }
 .card{
-    margin: 20% 10%;
+    margin: 10%;
+    padding-bottom: 10px;
 }
+h2{
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+.form-group{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-text{
+    display: inline-block;
+    float: left;
+}
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;  
+    border-left: 10px solid rgb(196, 43, 43);
+    float : left;
+    vertical-align: middle;
+  }
 .text{
     font-size: 100px;
     margin-left: 20px;

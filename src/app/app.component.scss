@@ -20,6 +20,7 @@
     }
     img, .navbar-brand {
       padding: 0px !important;
+      max-width: 100%;
     }
 
     .nav-link{
@@ -31,7 +32,7 @@
     .navbar {
         overflow: hidden;
         background-color: black;
-        position: fixed;
+        position: inherit;
         bottom: 0;
         width: 100%;
       }
