@@ -1,0 +1,62 @@
+.container-fluid{
+    padding: 0px;
+    margin: 0px;
+}
+.header{
+    .navbar{
+      padding: 0px 5px;
+    }
+
+    a{
+      padding : 15px;
+    }
+
+    .bg-light{
+      background-color: white !important;
+    }
+
+    .navbar a:hover {
+      background: rgb(230, 225, 225);
+    }
+    img, .navbar-brand {
+      padding: 0px !important;
+    }
+
+    .nav-link{
+      color: black;
+    }
+}
+
+.footer{
+    .navbar {
+        overflow: hidden;
+        background-color: black;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .navbar a:hover {
+        background: #f1f1f1;
+        color: black;
+      }
+
+      .navbar-text{
+          color : white;
+          float : right !important;
+      }
+      span{
+        float : right !important;
+      }
+      
+}
