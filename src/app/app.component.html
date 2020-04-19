@@ -46,15 +46,17 @@
 
 <!-- footer -->
 <div class="footer">
-    <nav class="navbar navbar-expand" *ngIf="currentUser">
-        <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" routerLink="/">Home</a>
-            <a class="nav-item nav-link" routerLink="/courses">Courses</a>
-            <a class="nav-item nav-link" routerLink="/features">Features</a>
-            <a class="nav-item nav-link" routerLink="/profile">Profile</a>
+    <div class="row col-md-12" *ngIf="currentUser">
+        <div class="col-md-6">
+                <a class="link" routerLink="/">Home</a>
+                <a class="link" routerLink="/courses">Courses</a>
+                <a class="link" routerLink="/features">Features</a>
+                <a class="link" routerLink="/profile">Profile</a>
         </div>
-        <div class="navbar-text justify-content-end">
-            MAQ Software &copy; 2019
+        <div class="col-md-6">
+            <div class="text-right">
+                MAQ Software &copy; 2019
+            </div>
         </div>
-    </nav>
+    </div>
 </div>
