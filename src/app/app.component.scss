@@ -20,6 +20,15 @@
     }
     img, .navbar-brand {
       padding: 0px !important;
+      max-width: 100%;
+    }
+
+    .fa-star{
+      padding-right: 2px;
+    }
+
+    .fa-user-circle{
+      padding-left: 5px;
     }
 
     .nav-link{
@@ -28,35 +37,22 @@
 }
 
 .footer{
-    .navbar {
-        overflow: hidden;
-        background-color: black;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-      
-      .navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 15px 30px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-      
-      .navbar a:hover {
-        background: #f1f1f1;
-        color: black;
-      }
 
-      .navbar-text{
-          color : white;
-          float : right !important;
+  background-color: black;
+  color: white;
+  padding: 30px;
+
+  .col-md-6{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+      .link{
+        display: table-cell;
+        text-align: center;
+        text-decoration: none;
+        color: white;
       }
-      span{
-        float : right !important;
-      }
-      
+    }
+   
 }

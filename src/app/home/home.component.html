@@ -1,13 +1,292 @@
 ﻿<div class="container-fluid">
     <div class="welcomeuser">
-    <div class="row col-md-12">
-        <div class="col-md-6 text">
-            <h1>Welcome {{currentUser.firstName}}!</h1>
-            <h2>You are logged in as the {{currentUser.role}}!!</h2>
-        </div>
-        <div class="col-md-6">
-            <img src="assets/images/cover.png">
+        <div class="row col-md-12">
+            <div class="col-md-6 text">
+                <h1>Welcome {{currentUser.firstName}}!</h1>
+                <h2>You are logged in as the {{currentUser.role}}!!</h2>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/images/cover.png">
+            </div>
         </div>
     </div>
-</div>
+    <div class="content">
+        <!-- USER 1 : Can view courses and features only. -->
+        <div *ngIf="currentUser.role === 'user1'">
+            <div class="row col-md-12">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <h3><i class="fa fa-book"></i> Courses</h3>
+                        <div class="course">
+                            <h4>Introduction to the C# Language and the .NET Framework</h4>
+            <p>C# is an elegant and type-safe object-oriented language that enables developers to build a variety of secure and robust applications that run on the .NET Framework
+            </p>
+                        </div>
+                        <div class="course">
+                            <h4>Xamarin</h4>
+            <p>Xamarin is an open-source platform for building modern and performant applications for iOS, Android, and Windows with .NET. Xamarin is an abstraction layer that manages communication of shared code with underlying platform code. Xamarin runs in a managed environment that provides conveniences such as memory allocation and garbage collection</p>
+                        </div>
+                        <div class="course">
+                            <h4>Introduction to F#</h4>
+            <p>F# programming primarily involves defining types and functions that are type-inferred and generalized automatically. This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.</p>
+                        </div>
+                        <div class="all-courses-link text-center">
+                            <a class="link-text" routerLink="/courses">See All Courses</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel">
+                        <h3><i class="fa fa-star"></i>Features</h3>
+                        <div class="feature">
+                            <h4>EnableEducateLandingPageNavbarLink</h4>
+                                <p>If enabled, Nav-bar will contain Educate Landing Page link without any dropdown option </p>
+                        </div>
+                        <div class="feature">
+                            <h4>EnableEducateCourseHistoryPage</h4>
+                                <p>If enabled, View course history link will navigate to course history page </p>
+                        </div>
+                        <div class="feature">
+                            <h4>EnableServicesHubLearningPath</h4>
+                                <p>If enabled, this will view the Learning Path Landing page, Module page, Unit page</p>
+                        </div>
+                        
+                        <div class="all-features-link text-center">
+                            <a class="link-text" routerLink="/features">See All Features</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- USER 2 : Can view features only. -->
+        <div *ngIf="currentUser.role === 'user2'">
+            <div class="row col-md-12">
+                <div class="panel">
+                    <h3><i class="fa fa-star"></i>Features</h3>
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>EnableEducateLandingPageNavbarLink</h4>
+                                    <p>If enabled, Nav-bar will contain Educate Landing Page link without any dropdown option </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>EnableEducateCourseHistoryPage</h4>
+                                    <p>If enabled, View course history link will navigate to course history page </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>EnableServicesHubLearningPath</h4>
+                                    <p>If enabled, this will view the Learning Path Landing page, Module page, Unit page</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>EnableEducateLandingPage</h4>
+                                    <p>If enabled, Learning button present in Nav-bar will navigate to Educate Landing Page</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>PSE_EnableConsentServiceV2</h4>
+                                    <p>If enabled, external resources and consent related operations will be carried by the consent service</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>EnableEducateLandingPageNavbarLink</h4>
+                                    <p>If enabled, Nav-bar will contain Educate Landing Page link without any dropdown option </p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="all-features-link text-center">
+                            <a class="link-text" routerLink="/features">See All Features;</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                   
+                </div>
+        </div>
+    </div>
+    <!-- USER 3 : Can view courses only. -->
+        <div *ngIf="currentUser.role === 'user3'">
+            <div class="row col-md-12">
+                <div class="panel">
+                    <h3><i class="fa fa-book"></i>Courses</h3>
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <div class="course">
+                                <h4>Introduction to the C# Language and the .NET Framework</h4>
+                <p>C# is an elegant and type-safe object-oriented language that enables developers to build a variety of secure and robust applications that run on the .NET Framework
+                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="course">
+                                <h4>Xamarin</h4>
+                <p>Xamarin is an open-source platform for building modern and performant applications for iOS, Android, and Windows with .NET. Xamarin is an abstraction layer that manages communication of shared code with underlying platform code. Xamarin runs in a managed environment that provides conveniences such as memory allocation and garbage collection</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <div class="course">
+                                <h4>Introduction to F#</h4>
+                <p>F# programming primarily involves defining types and functions that are type-inferred and generalized automatically. This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="course">
+                                <h4>Bing Spatial Data Services</h4>
+                                    <p>"The Bing™ Spatial Data Services Application Programming Interface (API) provides a Representational State Transfer (REST) interface that can geocode, store and query spatial data. This simple REST interface accomplishes tasks by setting parameters in a URL and then submitting the URL as an HTTP request."                        
+                                    </p></div>
+                        </div>
+                    </div>
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <div class="course">
+                                <h4>Azure Bot Service</h4>
+                                    <p>Azure Bot Service and Bot Framework provide tools to build, test, deploy, and manage intelligent bots all in one place. Through the use of modular and extensible framework provided by the SDK, tools, templates, and AI services developers can create bots that use speech, understand natural language, handle questions and answers, and more."                       
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="course">
+                                <h4>Dynamics 365 Business Central</h4>
+                                    <p>Business Central is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries."                        
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                  
+                        <div class="all-courses-link text-center">
+                            <a class="link-text" routerLink="/courses">See All Courses;</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                    
+                </div>
+        </div>
+        </div>
+         <!-- USER 4 : Can view nothing. -->
+        <div *ngIf="currentUser.role === 'user4'">
+
+        </div>
+         <!-- USER 5 : Admin. Can view courses, course details link, view features and modify features  -->
+        <div *ngIf="currentUser.role === 'Admin1'">
+            <div class="row col-md-12">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <h3><i class="fa fa-book"></i> Courses</h3>
+                        
+                        <div class="course">
+                            <h4>Introduction to the C# Language and the .NET Framework</h4>
+            <p>C# is an elegant and type-safe object-oriented language that enables developers to build a variety of secure and robust applications that run on the .NET Framework
+               <br> <a class="link-text" routerLink="/courses">View Details</a>
+                <span class="arrow-right"></span></p>
+            
+                        </div>
+                        
+                    
+                        <div class="course">
+                            <h4>Xamarin</h4>
+            <p>Xamarin is an open-source platform for building modern and performant applications for iOS, Android, and Windows with .NET. Xamarin is an abstraction layer that manages communication of shared code with underlying platform code. Xamarin runs in a managed environment that provides conveniences such as memory allocation and garbage collection
+                <br> <a class="link-text" routerLink="/courses">View Details</a>
+                <span class="arrow-right"></span></p>
+                        </div>
+                        <div class="course">
+                            <h4>Introduction to F#</h4>
+            <p>F# programming primarily involves defining types and functions that are type-inferred and generalized automatically. This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.
+                <br> <a class="link-text" routerLink="/courses">View Details</a>
+                <span class="arrow-right"></span></p>            
+            </div>
+                        <div class="all-courses-link text-center">
+                            <a class="link-text" routerLink="/courses">See All Courses</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel">
+                        <h3><i class="fa fa-star"></i>Features</h3>
+                        <div class="feature">
+                            <h4>EnableEducateLandingPageNavbarLink</h4>
+                                <p>If enabled, Nav-bar will contain Educate Landing Page link without any dropdown option </p>
+                        </div>
+                        <div class="feature">
+                            <h4>EnableEducateCourseHistoryPage</h4>
+                                <p>If enabled, View course history link will navigate to course history page </p>
+                        </div>
+                        <div class="feature">
+                            <h4>EnableServicesHubLearningPath</h4>
+                                <p>If enabled, this will view the Learning Path Landing page, Module page, Unit page</p>
+                        </div>                      
+                        <div class="all-features-link text-center">
+                            <a class="link-text" routerLink="/features">See All Features</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- USER 6 : Admin2. Can view courses, features. Can modify features also. -->
+        <div *ngIf="currentUser.role === 'Admin2'">
+            <div class="row col-md-12">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <h3><i class="fa fa-book"></i> Courses</h3>
+                        <div class="course">
+                            <h4>Introduction to the C# Language and the .NET Framework</h4>
+            <p>C# is an elegant and type-safe object-oriented language that enables developers to build a variety of secure and robust applications that run on the .NET Framework
+            </p>
+                        </div>
+                        <div class="course">
+                            <h4>Xamarin</h4>
+            <p>Xamarin is an open-source platform for building modern and performant applications for iOS, Android, and Windows with .NET. Xamarin is an abstraction layer that manages communication of shared code with underlying platform code. Xamarin runs in a managed environment that provides conveniences such as memory allocation and garbage collection</p>
+                        </div>
+                        <div class="course">
+                            <h4>Introduction to F#</h4>
+            <p>F# programming primarily involves defining types and functions that are type-inferred and generalized automatically. This allows your focus to remain on the problem domain and manipulating its data, rather than the details of programming.</p>
+                        </div>
+                        <div class="all-courses-link text-center">
+                            <a class="link-text" routerLink="/courses">See All Courses</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel">
+                        <h3><i class="fa fa-star"></i>Features</h3>
+                        <div class="feature">
+                            <h4>EnableEducateLandingPageNavbarLink</h4>
+                                <p>If enabled, Nav-bar will contain Educate Landing Page link without any dropdown option </p>
+                        </div>
+                        <div class="feature">
+                            <h4>EnableEducateCourseHistoryPage</h4>
+                                <p>If enabled, View course history link will navigate to course history page </p>
+                        </div>
+                        <div class="feature">
+                            <h4>EnableServicesHubLearningPath</h4>
+                                <p>If enabled, this will view the Learning Path Landing page, Module page, Unit page</p>
+                        </div>                       
+                        <div class="all-features-link text-center">
+                            <a class="link-text" routerLink="/features">See All Features</a>
+                            <div class="arrow-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
